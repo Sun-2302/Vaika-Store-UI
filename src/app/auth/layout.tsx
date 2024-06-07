@@ -4,10 +4,10 @@ import { PropsWithChildren, useState } from 'react';
 // Chakra imports
 
 // Layout components
-import { SidebarContext } from 'contexts/SidebarContext';
+import { SidebarContext } from '../../contexts/SidebarContext';
 import React from 'react';
-import { isWindowAvailable } from 'utils/navigation';
-import FixedPlugin from 'components/fixedPlugin/FixedPlugin';
+import { isWindowAvailable } from '../../lib/utils/navigation';
+import FixedPlugin from '../../components/fixedPlugin/FixedPlugin';
 
 // Custom Chakra theme
 

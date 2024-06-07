@@ -69,7 +69,6 @@ function SignInDefault() {
                 placeholder="mail@simmmple.com"
                 id="email"
                 type="text"
-                value={formData.email}
                 onChange={handleChange}
               />
               {errors.email && (
@@ -84,7 +83,6 @@ function SignInDefault() {
                 placeholder="Min. 8 characters"
                 id="password"
                 type="password"
-                value={formData.password}
                 onChange={handleChange}
               />
               {errors.password && (
