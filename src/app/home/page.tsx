@@ -1,16 +1,37 @@
 "use client";
 import BrandCard from "./components/BrandCard"
-import CarCard from "./components/CarCard"
+import CarCard from './components/CarCard';
 import NavBar from "./components/NavBar"
+import { Car } from "./interface/car";
 
 
 function landingPage() {
+    const car: Car = {
+        name: "Audi R8",
+        price: 2000000,
+        status: "Available",
+        type: "Diesel",
+        configuration: {
+            brand: "Audi",
+            model: "Coupé V10 GT RWD 2023",
+            color: "White",
+            engine: "5.2L V10",
+            place_number: 2,
+            power: 456,
+        },
+        imageList: [
+            { id: "1", url: "https://example.com/images/audi-r8-1.jpg" },
+            { id: "2", url: "https://example.com/images/audi-r8-2.jpg" },
+            { id: "3", url: "https://example.com/images/audi-r8-3.jpg" }
+        ]
+    };
+    
     return (
         <div className="bg-[url('/car1.jpg')] bg-contain">
             <div className="bg-black bg-opacity-65">
                 <NavBar />
                 <div className="flex flex-col text-white items-center pt-40 pb-72">
-                    <p className="text-sm mb-2">find cars for sale near you</p>
+                    <p className="text-sm mb-2">Find cars for sale near you</p>
                     <p className="font-semibold text-4xl">Find Your Perfect Car</p>
                 </div>
                 <div className="bg-slate-100 pt-16 pb-10 rounded-t-[70px]">
@@ -24,11 +45,15 @@ function landingPage() {
                         <BrandCard name="Citroën" icon="/citroen.svg" />
                     </div>
                 </div>
-                <div className="flex flex-col pt-12 pb-16 pl-44 bg-white overflow-x-auto">
-                    <h1 className="text-2xl mb-5 font-semibold">🔥 Popular cars</h1>
-                    <div className="flex gap-5">
-                        <CarCard url="/R8.jpeg" name="Audi R8" brand="Audi" model="Coupé V10 GT RWD 2023" price={20_000_000} power={456} type="Diesel" placeNumber={5} />
-                        <CarCard url="/R8.jpeg" name="Audi R8" brand="Audi" model="Coupé V10 GT RWD 2023" price={20_000_000} power={456} type="Diesel" placeNumber={5} />
+                <div className="flex flex-col pt-12 pb-16 bg-white pl-44 overflow-x-auto">
+                    <h1 className="text-2xl mb-9  font-semibold">🔥 Popular cars</h1>
+                    <div className="flex gap-5 flex-wrap">
+                        <CarCard car={car} />
+                        <CarCard car={car} />
+                        <CarCard car={car} />
+                        <CarCard car={car} />
+                        <CarCard car={car} />
+                        <CarCard car={car} />
                     </div>
                 </div>
                 {/*Footer With Contact*/}
