@@ -27,13 +27,13 @@ function NavBar() {
                 <h1 className="text-xl mt-1 hover:scale-125">VAIKA</h1>
             </Link>
             <ul className="flex ml-auto gap-7">
-                <li className="mt-2 hover:scale-125">
+                <li className="mt-2 hover:underline">
                     <Link href={"/"}>Home</Link>
                 </li>
-                <li className="mt-2 hover:scale-125">
+                <li className="mt-2 hover:underline">
                     <Link href={"/"}>Search</Link>
                 </li>
-                <li className="mt-2 hover:scale-125">
+                <li className="mt-2 hover:underline">
                     <Link href={"/"}>Contact</Link>
                 </li>
                 <li>
