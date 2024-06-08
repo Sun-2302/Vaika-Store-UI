@@ -1,6 +1,10 @@
 "use client";
 import BrandCard from "./components/BrandCard"
 import CarCard from './components/CarCard';
+<<<<<<< HEAD
+=======
+import Footer from "./components/Footer";
+>>>>>>> 373a2cb8760785f253cfdc1e9d8ec2b235df227b
 import NavBar from "./components/NavBar"
 import { Car } from "./interface/car";
 
@@ -25,8 +29,13 @@ function landingPage() {
             { id: "3", url: "https://example.com/images/audi-r8-3.jpg" }
         ]
     };
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 373a2cb8760785f253cfdc1e9d8ec2b235df227b
     return (
+        <>
         <div className="bg-[url('/car1.jpg')] bg-contain">
             <div className="bg-black bg-opacity-65">
                 <NavBar />
@@ -56,13 +65,14 @@ function landingPage() {
                         <CarCard car={car} />
                     </div>
                 </div>
-                {/*Footer With Contact*/}
                 <div>
-                
+
                 </div>
             </div>
-
         </div>
+        <Footer></Footer>
+        </>
+        
 
     )
 }
